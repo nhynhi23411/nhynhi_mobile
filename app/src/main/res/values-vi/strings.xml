@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">K23411TApp</string>
+    <string name="str_welcome">Xin chào</string>
+    <string name="str_clickme">Chạm vào tôi !</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <string name="enter_your_password">Nhập mật khẩu của bạn</string>
+    <string name="enter_your_username">Nhập tên đăng nhập của bạn</string>
+    <string name="str_button_login">Đăng nhập</string>
+    <string name="str_exit">Thoát</string>
+    <string name="loginSucess">Đăng nhập thành công!!!!!!</string>
+    <string name="loginFail">Đăng nhập thất bại!!!!!!</string>
+</resources>

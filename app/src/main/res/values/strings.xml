@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">K23411TApp</string>
+    <string name="str_welcome">Welcome to K23411T</string>
+    <string name="str_clickme">Click Me !</string>
+    <string name="username">User Name </string>
+    <string name="password">Password </string>
+<string name="enter_your_password">Enter your password !</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="str_button_login">Login</string>
+    <string name="str_exit"> Exit</string>
+    <string name="loginSucess">Login successful!!!!!!</string>
+    <string name="loginFail">Login failed!!!!!!</string>
+</resources>
