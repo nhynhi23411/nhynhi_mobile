@@ -1,13 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">K23411TApp</string>
     <string name="str_welcome">Welcome to K23411T</string>
     <string name="str_clickme">Click Me !</string>
-    <string name="username">User Name </string>
-    <string name="password">Password </string>
-<string name="enter_your_password">Enter your password !</string>
+    <string name="username">User Name</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password !</string>
     <string name="enter_your_username">Enter your username</string>
     <string name="str_button_login">Login</string>
-    <string name="str_exit"> Exit</string>
+    <string name="str_exit">Exit</string>
     <string name="loginSucess">Login successful!!!!!!</string>
     <string name="loginFail">Login failed!!!!!!</string>
+    <string name="str_mc">MC</string>
+    <string name="str_mr">MR</string>
+    <string name="str_m_plus">M+</string>
+    <string name="str_m_minus">M-</string>
+    <string name="str_ms">MS</string>
+    <string name="str_m">M</string>
+    <string name="str_Cal">Open Calculator</string>
+    <string name="login_role">Login Role</string>
+    <string name="admin_role">Administrator</string>
+    <string name="employee_role">Employee</string>
+    <string name="dialog_exit_title">Confirm Exit</string>
+    <string name="dialog_exit_message">Are you sure you want to exit?</string>
+    <string name="dialog_exit_yes">Yes</string>
+    <string name="dialog_exit_no">No</string>
 </resources>

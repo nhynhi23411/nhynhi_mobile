@@ -40,6 +40,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.exp4j)
     implementation(libs.espresso.core)
     implementation(libs.espresso.core)
     testImplementation(libs.junit)

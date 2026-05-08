@@ -8,20 +8,90 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        android:text="@string/str_welcome"
-        android:textColor="#F44336"
-        android:textSize="34sp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:onClick="click_me"
-        android:id="@+id/button4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/str_clickme" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/str_welcome"
+                android:textColor="#F44336"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_me"
+                android:text="@string/str_clickme" />
+
+            <Button
+                android:onClick="exitSystem"
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_exit" />
+
+            <Button
+                android:id="@+id/button"
+                android:onClick="openCalculatorApp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/str_Cal" />
+        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

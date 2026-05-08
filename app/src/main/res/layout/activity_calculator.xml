@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".CalculatorActivity">
+
+    <EditText
+        android:id="@+id/edtFormular"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#1A1A1A"
+        android:gravity="bottom|end"
+        android:padding="16dp"
+        android:textColor="@color/white"
+        android:textSize="48sp"
+        android:ems="10"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:ignore="LabelFor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#1A1A1A"
+        android:padding="0dp"
+        android:layout_margin="0dp">
+
+        <TextView
+            android:id="@+id/btnMC"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="MC"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnMR"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="MR"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnMPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="M+"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnMMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="M-"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnMS"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="MS"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/btnM"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="M"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" />
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processInputData" android:id="@+id/btnPercent" android:text="%" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnCE" android:text="CE" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnC" android:text="C" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:id="@+id/btnDel" android:text="⌫" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processInputData" android:id="@+id/btnOneOverX" android:text="1/X" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnX2" android:text="X²" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnSqrt" android:text="√X" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnDiv" android:text="÷" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processInputData" android:id="@+id/btn7" android:text="7" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn8" android:text="8" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn9" android:text="9" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnMul" android:text="×" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processInputData" android:id="@+id/btn4" android:text="4" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn5" android:text="5" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn6" android:text="6" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnSub" android:text="−" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processInputData" android:id="@+id/btn1" android:text="1" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn2" android:text="2" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btn3" android:text="3" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:onClick="processInputData" android:id="@+id/btnPlus" android:text="+" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+
+        <TableRow android:layout_weight="1">
+            <Button android:id="@+id/btnPlusMinus" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:minHeight="0dp" android:padding="0dp" android:text="+/-" />
+            <Button android:onClick="processInputData" android:id="@+id/btn0" android:text="0" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:id="@+id/btnDot" android:text="." android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#323232" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+            <Button android:id="@+id/btnEqual" android:text="=" android:layout_width="0dp" android:layout_height="match_parent" android:backgroundTint="#FF8A65" android:textColor="#000000" android:insetTop="0dp" android:insetBottom="0dp" android:padding="0dp" android:minHeight="0dp" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

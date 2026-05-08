@@ -10,4 +10,6 @@
     <string name="str_exit">Thoát</string>
     <string name="loginSucess">Đăng nhập thành công!!!!!!</string>
     <string name="loginFail">Đăng nhập thất bại!!!!!!</string>
+    <string name="admin_role">Administrator</string>
+    <string name="employee_role">Employee</string>
 </resources>
