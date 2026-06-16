@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,157 +8,209 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp"
+    android:padding="22dp"
     android:background="@drawable/hinhnen"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/textView2"
+    <!-- CARD LOGIN -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Login system"
-        android:textAlignment="center"
-        android:textColor="#FF2264"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        android:shadowColor="#FFFFFF"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="8" />
+        app:cardCornerRadius="24dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#EEFFFFFF"
+        app:strokeWidth="1dp"
+        app:strokeColor="#E3ECF8">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/username"
-        android:textColor="#311B92"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:shadowColor="#FFFFFF"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="8" />
-
-    <EditText
-        android:id="@+id/edtUsername"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_your_username"
-        android:inputType="text"
-        android:layout_marginTop="4dp"
-        android:padding="12dp"
-        android:background="#D9FFFFFF"
-        android:textColor="#000000"
-        android:textColorHint="#666666"
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/password"
-        android:textColor="#311B92"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:shadowColor="#FFFFFF"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="8"
-
-        />
-
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/enter_your_password"
-        android:inputType="textPassword"
-        android:layout_marginTop="4dp"
-        android:padding="12dp"
-        android:background="#D9FFFFFF"
-        android:textColor="#000000"
-        android:textColorHint="#666666"
-        />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/login_role"
-        android:textColor="@color/error"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#FFE4E1"
-        android:padding="12dp">
-
-        <RadioButton
-            android:id="@+id/radAdmin"
-            android:background="#FAFAD2"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/admin_role" />
+            android:orientation="vertical"
+            android:padding="22dp">
 
-        <RadioButton
-            android:background="#C1FFC1"
-            android:id="@+id/radEmployee"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/employee_role" />
-    </RadioGroup>
+            <!-- TITLE -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOGIN SYSTEM"
+                android:textAlignment="center"
+                android:textColor="#1565C0"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:layout_marginBottom="6dp" />
 
-    <CheckBox
-        android:background="#E0FFFF"
-        android:id="@+id/chkSaveInfor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Save InFormation" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đăng nhập để tiếp tục"
+                android:textAlignment="center"
+                android:textColor="#78909C"
+                android:textSize="14sp"
+                android:layout_marginBottom="24dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:orientation="horizontal">
+            <!-- USERNAME LABEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:textColor="#263238"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
 
-        <Button
-            android:id="@+id/btn_Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginEnd="10dp"
-            android:onClick="loginSystem"
-            android:text="@string/str_button_login" />
+            <!-- USERNAME INPUT -->
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Email: admin@test.com"
+                android:inputType="textEmailAddress"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="#F3F7FF"
+                android:textColor="#000000"
+                android:textColorHint="#90A4AE"
+                android:textSize="14sp" />
 
-        <Button
-            android:id="@+id/btn_Exit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginStart="10dp"
-            android:onClick="exitSystem"
-            android:text="@string/str_exit" />
-    </LinearLayout>
+            <!-- PASSWORD LABEL -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/password"
+                android:textColor="#263238"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="6dp" />
 
-    <TextView
-        android:id="@+id/txtMessage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textAlignment="center"
-        android:textColor="#FF0000"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:shadowColor="#FFFFFF"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="5"
-        android:text="" />
+            <!-- PASSWORD INPUT -->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Mật khẩu: 123456"
+                android:inputType="textPassword"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:background="#F3F7FF"
+                android:textColor="#000000"
+                android:textColorHint="#90A4AE"
+                android:textSize="14sp" />
+
+            <!-- ROLE LABEL -->
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/login_role"
+                android:textColor="#1565C0"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- ROLE GROUP -->
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#F3F7FF"
+                android:padding="10dp">
+
+                <RadioButton
+                    android:id="@+id/radAdmin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/admin_role"
+                    android:textColor="#263238"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:buttonTint="#1565C0" />
+
+                <RadioButton
+                    android:id="@+id/radEmployee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/employee_role"
+                    android:textColor="#263238"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:buttonTint="#1565C0" />
+
+            </RadioGroup>
+
+            <!-- SAVE INFO -->
+            <CheckBox
+                android:id="@+id/chkSaveInfor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Save Information"
+                android:textColor="#455A64"
+                android:textSize="14sp"
+                android:buttonTint="#1565C0" />
+
+            <!-- BUTTON ROW -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_Login"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:onClick="loginSystem"
+                    android:text="@string/str_button_login"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1565C0"
+                    app:cornerRadius="14dp"
+                    app:icon="@android:drawable/ic_menu_send"
+                    app:iconTint="#FFFFFF"
+                    app:iconPadding="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_Exit"
+                    android:layout_width="0dp"
+                    android:layout_height="52dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:onClick="exitSystem"
+                    android:text="@string/str_exit"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#D32F2F"
+                    app:cornerRadius="14dp"
+                    app:icon="@android:drawable/ic_lock_power_off"
+                    app:iconTint="#FFFFFF"
+                    app:iconPadding="8dp" />
+
+            </LinearLayout>
+
+            <!-- MESSAGE -->
+            <TextView
+                android:id="@+id/txtMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#D32F2F"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </LinearLayout>

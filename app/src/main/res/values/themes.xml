@@ -1,9 +1,36 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+
     <!-- Base application theme. -->
     <style name="Base.Theme.K23411TApp" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.K23411TApp" parent="Base.Theme.K23411TApp" />
+    <!-- Theme có Action Bar với màu xanh nhạt -->
+    <style name="Base.Theme.K23411TAppwithActionBar" parent="Theme.Material3.DayNight">
+        <!-- Đổi màu nền của Action Bar sang màu xanh nhạt -->
+        <item name="colorPrimary">@color/light_blue_100</item>
+        <item name="colorPrimaryContainer">@color/light_blue_100</item>
+
+        <!-- Đổi màu chữ và icon trên Action Bar sang màu đen để nổi bật trên nền sáng -->
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Làm cho thanh trạng thái tiệp màu hoàn toàn với Action Bar -->
+        <item name="android:statusBarColor">@color/light_blue_100</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Theme chính của ứng dụng kế thừa từ theme Action Bar đã custom ở trên -->
+    <style name="Theme.K23411TApp" parent="Base.Theme.K23411TAppwithActionBar" />
+
+    <!-- Style cho các màn hình sử dụng Toolbar riêng (không dùng Action Bar mặc định) -->
+    <style name="Theme.K23411TApp.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorPrimary">@color/light_blue_100</item>
+        <item name="colorPrimaryContainer">@color/light_blue_100</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="android:statusBarColor">@color/light_blue_100</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
 </resources>

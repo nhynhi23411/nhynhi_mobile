@@ -1,15 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App & General -->
     <string name="app_name">K23411TApp</string>
     <string name="str_welcome">Xin chào</string>
+    <string name="str_exit">Thoát</string>
+    <string name="str_save">Lưu</string>
+    <string name="str_del">Xóa</string>
+    <string name="str_clear">Xóa trống</string>
     <string name="str_clickme">Chạm vào tôi !</string>
+
+    <!-- Login System -->
     <string name="username">Tên đăng nhập</string>
     <string name="password">Mật khẩu</string>
-    <string name="enter_your_password">Nhập mật khẩu của bạn</string>
     <string name="enter_your_username">Nhập tên đăng nhập của bạn</string>
+    <string name="enter_your_password">Nhập mật khẩu của bạn</string>
     <string name="str_button_login">Đăng nhập</string>
-    <string name="str_exit">Thoát</string>
-    <string name="loginSucess">Đăng nhập thành công!!!!!!</string>
-    <string name="loginFail">Đăng nhập thất bại!!!!!!</string>
+    <string name="login_role">Vai trò đăng nhập</string>
     <string name="admin_role">Administrator</string>
     <string name="employee_role">Employee</string>
+    <string name="loginSucess">Đăng nhập thành công!!!!!!</string>
+    <string name="loginFail">Đăng nhập thất bại!!!!!!</string>
+
+    <!-- Employee Management Labels -->
+    <string name="id">Mã số</string>
+    <string name="name">Họ và tên</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="title_saved_info">Thông tin đã lưu:</string>
+
+    <!-- Hints for EditText -->
+    <string name="enter_id">Nhập mã số...</string>
+    <string name="enter_name">Nhập họ và tên...</string>
+    <string name="enter_phone">Nhập số điện thoại...</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_exit_title">Xác nhận thoát</string>
+    <string name="dialog_exit_message">Bạn có chắc chắn muốn thoát không?</string>
+    <string name="dialog_exit_yes">Có</string>
+    <string name="dialog_exit_no">Không</string>
+
+    <!-- Feedback Messages -->
+    <string name="msg_empty_info">Vui lòng nhập đầy đủ thông tin!</string>
+    <string name="msg_save_success">Lưu dữ liệu thành công!</string>
+    <string name="msg_update_success">Đã cập nhật thông tin!</string>
+    <string name="msg_del_success">Đã xóa nhân viên!</string>
+    <string name="msg_select_to_del">Vui lòng chọn một nhân viên để xóa!</string>
+
+    <!-- Calculator -->
+    <string name="str_Cal">Mở máy tính</string>
+    <string name="str_mc">MC</string>
+    <string name="str_mr">MR</string>
+    <string name="str_m_plus">M+</string>
+    <string name="str_m_minus">M-</string>
+    <string name="str_ms">MS</string>
+    <string name="str_m">M</string>
+    <string name="str_department">Phòng ban</string>
+    <string name="str_employee">Nhân viên</string>
+    <string name="str_birthplace">Nơi sinh</string>
+
+    <!-- ====================================================================== -->
+    <!-- 34 Provinces & Cities (String Array in Vietnamese) -->
+    <!-- ====================================================================== -->
+    <string-array name="provinces_and_cities_array">
+        <item>Tỉnh Tuyên Quang</item>
+        <item>Tỉnh Lào Cai</item>
+        <item>Tỉnh Thái Nguyên</item>
+        <item>Tỉnh Phú Thọ</item>
+        <item>Tỉnh Bắc Ninh</item>
+        <item>Tỉnh Hưng Yên</item>
+        <item>Thành phố Hải Phòng</item>
+        <item>Tỉnh Ninh Bình</item>
+        <item>Tỉnh Quảng Trị</item>
+        <item>Thành phố Đà Nẵng</item>
+        <item>Tỉnh Quảng Ngãi</item>
+        <item>Tỉnh Gia Lai</item>
+        <item>Tỉnh Khánh Hoà</item>
+        <item>Tỉnh Lâm Đồng</item>
+        <item>Tỉnh Đắk Lắk</item>
+        <item>Thành phố Hồ Chí Minh</item>
+        <item>Tỉnh Đồng Nai</item>
+        <item>Tỉnh Tây Ninh</item>
+        <item>Thành phố Cần Thơ</item>
+        <item>Tỉnh Vĩnh Long</item>
+        <item>Tỉnh Đồng Tháp</item>
+        <item>Tỉnh Cà Mau</item>
+        <item>Tỉnh An Giang</item>
+        <item>Thành phố Hà Nội</item>
+        <item>Thành phố Huế</item>
+        <item>Tỉnh Lai Châu</item>
+        <item>Tỉnh Điện Biên</item>
+        <item>Tỉnh Sơn La</item>
+        <item>Tỉnh Lạng Sơn</item>
+        <item>Tỉnh Quảng Ninh</item>
+        <item>Tỉnh Thanh Hoá</item>
+        <item>Tỉnh Nghệ An</item>
+        <item>Tỉnh Hà Tĩnh</item>
+        <item>Tỉnh Cao Bằng</item>
+    </string-array>
+
 </resources>

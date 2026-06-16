@@ -8,11 +8,22 @@
 
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
 
     <application
         android:allowBackup="true"
@@ -23,6 +34,62 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.K23411TApp">
+        <activity
+            android:name=".GoldPriceActivity"
+            android:label="Giá Vàng"
+            android:exported="false" />
+        <activity
+            android:name=".MultiThreadingObjectActivity"
+            android:label="Multi-Threading Object"
+            android:exported="false" />
+        <activity
+            android:name=".MultiThreadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MultiThreading2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".SMSActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MyContactActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CategoryNewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderManagmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OrderSqliteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".OrderDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".CategorySqliteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".CustomerSqliteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".EmployeeSqliteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".ProductSqliteActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".AddEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EmployeeAdvancedMainActivity"
+            android:exported="false" />
         <activity
             android:name=".AdminManagementActivity"
             android:exported="false" />

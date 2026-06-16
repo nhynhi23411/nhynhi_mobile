@@ -1,28 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">K23411TApp</string>
+    <string name="app_name">Employee Management</string>
     <string name="str_welcome">Welcome to K23411T</string>
-    <string name="str_clickme">Click Me !</string>
+    <string name="str_exit">Exit</string>
+    <string name="str_save">Save</string>
+    <string name="str_del">Delete</string>
+    <string name="str_clear">Clear</string>
+    <string name="str_clickme">Click Me!</string>
+    <string name="str_cancel">Cancel</string>
+
     <string name="username">User Name</string>
     <string name="password">Password</string>
-    <string name="enter_your_password">Enter your password !</string>
     <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_password">Enter your password!</string>
     <string name="str_button_login">Login</string>
-    <string name="str_exit">Exit</string>
-    <string name="loginSucess">Login successful!!!!!!</string>
-    <string name="loginFail">Login failed!!!!!!</string>
+    <string name="login_role">Login Role</string>
+    <string name="admin_role">Administrator</string>
+    <string name="employee_role">Employee</string>
+    <string name="loginSucess">Login successful!</string>
+    <string name="loginFail">Login failed!</string>
+
+    <string name="id">ID</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="title_saved_info">Saved Information:</string>
+    <string name="enter_id">Enter ID...</string>
+    <string name="enter_name">Enter name...</string>
+    <string name="enter_phone">Enter phone number...</string>
+
+    <string name="dialog_exit_title">Confirm Exit</string>
+    <string name="dialog_exit_message">Are you sure you want to exit?</string>
+    <string name="dialog_exit_yes">Yes</string>
+    <string name="dialog_exit_no">No</string>
+    <string name="msg_empty_info">Please enter all information!</string>
+    <string name="msg_save_success">Data saved successfully!</string>
+    <string name="msg_update_success">Information updated!</string>
+    <string name="msg_del_success">Employee deleted!</string>
+    <string name="msg_select_to_del">Please select an employee to delete!</string>
+
+    <string name="title_order_management">Order Management (Mock)</string>
+    <string name="title_order_sqlite">Order Management (SQLite)</string>
+    <string name="from_date">From Date:</string>
+    <string name="to_date">To Date:</string>
+    <string name="hint_date">dd/mm/yyyy</string>
+    <string name="btn_clear_filter">Clear</string>
+    <string name="btn_filter">Filter</string>
+    <string name="header_id">ID</string>
+    <string name="header_date">Date</string>
+    <string name="header_status">Status</string>
+    <string name="header_total">Total</string>
+
+    <string name="label_order_info">ORDER INFORMATION</string>
+    <string name="label_shipping_info">SHIPPING INFORMATION</string>
+    <string name="label_order_id">Order ID:</string>
+    <string name="label_date">Date:</string>
+    <string name="label_status">Status:</string>
+    <string name="label_customer_id">Customer ID:</string>
+    <string name="label_employee_id">Employee ID:</string>
+    <string name="label_address">Address:</string>
+    <string name="label_phone">Phone:</string>
+    <string name="label_shipped_date">Shipped Date:</string>
+    <string name="label_freight">Freight:</string>
+    <string name="label_notes">Notes:</string>
+    <string name="label_total_amount">TOTAL AMOUNT</string>
+    <string name="na">N/A</string>
+    <string name="zero_currency">0 đ</string>
+
+    <string name="str_Cal">Open Calculator</string>
     <string name="str_mc">MC</string>
     <string name="str_mr">MR</string>
     <string name="str_m_plus">M+</string>
     <string name="str_m_minus">M-</string>
     <string name="str_ms">MS</string>
     <string name="str_m">M</string>
-    <string name="str_Cal">Open Calculator</string>
-    <string name="login_role">Login Role</string>
-    <string name="admin_role">Administrator</string>
-    <string name="employee_role">Employee</string>
-    <string name="dialog_exit_title">Confirm Exit</string>
-    <string name="dialog_exit_message">Are you sure you want to exit?</string>
-    <string name="dialog_exit_yes">Yes</string>
-    <string name="dialog_exit_no">No</string>
+    <string name="str_department">Department</string>
+    <string name="str_employee">Employees</string>
+    <string name="str_birthplace">Birth Place</string>
+
+    <string name="str_oder_status_all">All</string>
+    <string name="str_oder_status_on_logistic">On Logistic</string>
+    <string name="str_oder_status_not_payment">Not Payment</string>
+    <string name="str_oder_status_completed">Completed</string>
+    <string name="str_oder_status_complain">Complain</string>
+
+    <string name="order_result_count_default">Tổng: 0 đơn hàng</string>
+    <string name="order_result_count">Tổng: %1$d đơn hàng</string>
+    <string name="order_empty_title">Không có đơn hàng</string>
+    <string name="order_empty_subtitle">Thử đổi bộ lọc hoặc khoảng ngày khác</string>
+    <string name="order_update_status">Cập nhật trạng thái</string>
+    <string name="order_status_updated">Đã cập nhật &amp; lưu trạng thái</string>
+    <string name="str_new_category">New Category</string>
+    <string name="str_statistic">Category Statistic</string>
+    <string name="str_categoryname">Category Name</string>
+    <string name="str_categorydescription">Category Description</string>
+    <string name="str_categoryid">Category ID</string>
+
+    <string name="sms_title">Message Details</string>
+    <string name="sms_sender_label">Sender (Phone):</string>
+    <string name="sms_time_label">Received Time:</string>
+    <string name="sms_content_label">Message Content:</string>
+    <string name="sms_sample_phone">0901234567</string>
+    <string name="sms_sample_time">11:30 AM - 06/11/2026</string>
+    <string name="sms_sample_content">Hello, this is a sample message for the Mobile Device Programming (Android) practical assignment at UEL.</string>
+    <string-array name="provinces_and_cities_array">
+        <item>Tuyen Quang Province</item>
+        <item>Lao Cai Province</item>
+        <item>Thai Nguyen Province</item>
+        <item>Phu Tho Province</item>
+        <item>Bac Ninh Province</item>
+        <item>Hung Yen Province</item>
+        <item>Hai Phong City</item>
+        <item>Ninh Binh Province</item>
+        <item>Quang Tri Province</item>
+        <item>Da Nang City</item>
+        <item>Quang Ngai Province</item>
+        <item>Gia Lai Province</item>
+        <item>Khanh Hoa Province</item>
+        <item>Lam Dong Province</item>
+        <item>Dak Lak Province</item>
+        <item>Ho Chi Minh City</item>
+        <item>Dong Nai Province</item>
+        <item>Tay Ninh Province</item>
+        <item>Can Tho City</item>
+        <item>Vinh Long Province</item>
+        <item>Dong Thap Province</item>
+        <item>Ca Mau Province</item>
+        <item>An Giang Province</item>
+        <item>Ha Noi City</item>
+        <item>Hue City</item>
+        <item>Lai Chau Province</item>
+        <item>Dien Bien Province</item>
+        <item>Son La Province</item>
+        <item>Lang Son Province</item>
+        <item>Quang Ninh Province</item>
+        <item>Thanh Hoa Province</item>
+        <item>Nghe An Province</item>
+        <item>Ha Tinh Province</item>
+        <item>Cao Bang Province</item>
+    </string-array>
+
+
 </resources>

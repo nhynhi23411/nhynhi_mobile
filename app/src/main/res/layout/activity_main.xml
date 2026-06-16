@@ -1,97 +1,400 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:background="#F4F7FB">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="20dp"
+        android:background="#1565C0">
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/str_welcome"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Chọn chức năng bên dưới"
+            android:textColor="#D6E8FF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:padding="18dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/str_welcome"
-                android:textColor="#F44336"
-                android:textSize="34sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button4"
+            <!-- CARD TÍNH NĂNG -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="click_me"
-                android:text="@string/str_clickme" />
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E3ECF8">
 
-            <Button
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TÍNH NĂNG CHÍNH"
+                        android:textColor="#1565C0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="12dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="Say Hello!"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="click_me"
+                        app:backgroundTint="#00ACC1"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_dialog_info"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/title_order_management"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openOrderManagement"
+                        app:backgroundTint="#FB8C00"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_menu_agenda"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/title_order_sqlite"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openOrderSqlite"
+                        app:backgroundTint="#00897B"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_menu_manage"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:text="@string/str_Cal"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openCalculatorApp"
+                        app:backgroundTint="#7E57C2"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_menu_edit"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Multi-Threading"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openMultiThreading"
+                        app:backgroundTint="#00838F"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_menu_rotate"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Multi-Threading 2"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openMultiThreading2"
+                        app:backgroundTint="#E65100"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_input_add"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- CARD SQLITE DATA -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E3ECF8">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DỮ LIỆU SQLITE"
+                        android:textColor="#1565C0"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.08"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Row 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Danh mục"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openCategorySqlite"
+                            app:backgroundTint="#EC407A"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_menu_sort_by_size"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:text="Sản phẩm"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openProductSqlite"
+                            app:backgroundTint="#43A047"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_menu_gallery"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Row 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Khách hàng"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openCustomerSqlite"
+                            app:backgroundTint="#3949AB"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_menu_myplaces"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:text="Nhân viên"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openEmployeeSqlite"
+                            app:backgroundTint="#F9A825"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_menu_manage"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Row 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Danh bạ"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openMyContact"
+                            app:backgroundTint="#00897B"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_menu_myplaces"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:text="Thêm DM"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openAddCategory"
+                            app:backgroundTint="#EC407A"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_input_add"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Row 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:text="Tin nhắn SMS"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openSmsActivity"
+                            app:backgroundTint="#5C6BC0"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/ic_dialog_email"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                    </LinearLayout>
+
+                    <!-- Row 5 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="64dp"
+                            android:layout_weight="1"
+                            android:text="Giá Vàng"
+                            android:textColor="#FFFFFF"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:onClick="openGoldPrice"
+                            app:backgroundTint="#F9A825"
+                            app:cornerRadius="14dp"
+                            app:icon="@android:drawable/star_big_on"
+                            app:iconTint="#FFFFFF"
+                            app:iconGravity="textTop"
+                            app:iconPadding="4dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- EXIT BUTTON -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/str_exit"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
                 android:onClick="exitSystem"
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/str_exit" />
+                app:backgroundTint="#D32F2F"
+                app:cornerRadius="16dp"
+                app:icon="@android:drawable/ic_lock_power_off"
+                app:iconTint="#FFFFFF"
+                app:iconPadding="10dp" />
 
-            <Button
-                android:id="@+id/button"
-                android:onClick="openCalculatorApp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/str_Cal" />
         </LinearLayout>
-    </ScrollView>
 
+    </ScrollView>
 
 </LinearLayout>

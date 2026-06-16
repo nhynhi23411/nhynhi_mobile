@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sử dụng MaterialCardView để bo góc và tạo bóng đổ giúp Dialog nổi bật -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="28dp">
+
+        <!-- Tiêu đề Dialog -->
+        <TextView
+            android:id="@+id/txtDialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:letterSpacing="0.02"
+            android:text="@string/dialog_exit_title"
+            android:textColor="#FF4C4C"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Lời nhắn phụ (Subtitle) - Giúp UI đỡ trống và thân thiện hơn -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Bạn có chắc chắn muốn rời đi không?"
+            android:textColor="#757575"
+            android:textSize="14sp" />
+
+        <!-- Hình ảnh minh hoạ -->
+        <!-- Đã thu nhỏ xuống 200dp để an toàn trên mọi thiết bị, dùng fitCenter để giữ tỷ lệ -->
+        <ImageView
+            android:id="@+id/imgDialogIcon"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@mipmap/ic_exit" />
+
+        <!-- Khối chứa 2 nút chọn: Dùng weight để chia đều 2 bên -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <!-- Nút NO: Đặt bên trái theo thói quen UX hiện đại -->
+            <ImageView
+                android:id="@+id/imgBtnNo"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/ic_no" />
+
+            <!-- Nút YES -->
+            <ImageView
+                android:id="@+id/imgBtnYes"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="fitCenter"
+                app:srcCompat="@mipmap/ic_yes" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -8,6 +8,7 @@ material = "1.10.0"
 activity = "1.8.0"
 constraintlayout = "2.1.4"
 exp4j = "0.4.8"
+volley = "1.2.1"
 
 
 [libraries]
@@ -19,6 +20,7 @@ material = { group = "com.google.android.material", name = "material", version.r
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 exp4j = { group = "net.objecthunter", name = "exp4j", version.ref = "exp4j" }
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 
 
 [plugins]

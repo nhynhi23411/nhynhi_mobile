@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F2F4F8"
+    tools:context=".OrderSqliteActivity">
+
+    <!-- ══ TOOLBAR ══ -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbarSqlite"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#1565C0"
+        android:elevation="4dp"
+        app:title="Quản lý đơn hàng"
+        app:titleTextColor="#FFFFFF"
+        app:navigationIcon="@mipmap/ic_exit"
+        app:navigationIconTint="#FFFFFF"/>
+
+    <!-- ══ FILTER CARD ══ -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardFilter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <!-- Spinner: FrameLayout bọc ngoài để vừa có border vừa hiện đúng arrow -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_filter_input"
+                android:layout_marginBottom="10dp">
+
+                <Spinner
+                    android:id="@+id/spnStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"/>
+            </FrameLayout>
+
+            <!-- Date row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tvFromDate"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_input"
+                    android:hint="Từ ngày"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:textColorHint="#AAAAAA"
+                    app:drawableEndCompat="@android:drawable/ic_menu_my_calendar"/>
+
+                <TextView
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:text="–"
+                    android:textColor="#AAAAAA"
+                    android:gravity="center"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/tvToDate"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_filter_input"
+                    android:hint="Đến ngày"
+                    android:gravity="center_vertical"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="8dp"
+                    android:textSize="13sp"
+                    android:textColor="#212121"
+                    android:textColorHint="#AAAAAA"
+                    app:drawableEndCompat="@android:drawable/ic_menu_my_calendar"/>
+            </LinearLayout>
+
+            <!-- Buttons row -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnFilter"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Lọc đơn hàng"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:backgroundTint="#1565C0"
+                    app:cornerRadius="12dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnClearFilter"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    app:icon="@android:drawable/ic_menu_revert"
+                    app:iconTint="#1565C0"
+                    app:backgroundTint="#E8EEF9"
+                    app:cornerRadius="12dp"
+                    app:iconSize="20dp"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- ══ RESULT COUNT ══ -->
+    <TextView
+        android:id="@+id/tvResultCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="6dp"
+        android:text="@string/order_result_count_default"
+        android:textColor="#1565C0"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+
+    <!-- ══ LIST CARD ══ -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="3dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Header cột -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:orientation="horizontal"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:background="#EEF2FF">
+
+                <View android:layout_width="4dp" android:layout_height="match_parent"/>
+
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:text="MÃ ĐƠN"
+                    android:textColor="#3949AB"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:paddingStart="10dp"
+                    android:letterSpacing="0.05"/>
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:text="NGÀY"
+                    android:textColor="#3949AB"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"/>
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1.6"
+                    android:layout_height="wrap_content"
+                    android:text="TRẠNG THÁI"
+                    android:textColor="#3949AB"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:letterSpacing="0.05"/>
+                <TextView
+                    android:layout_width="0dp" android:layout_weight="1.8"
+                    android:layout_height="wrap_content"
+                    android:text="TỔNG TIỀN"
+                    android:textColor="#3949AB"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:gravity="end"
+                    android:letterSpacing="0.05"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E8EDF8"/>
+
+            <!-- List + Empty -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <ListView
+                    android:id="@+id/lvOrderSqlite"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:divider="#F0F2F8"
+                    android:dividerHeight="1dp"
+                    android:scrollbars="none"/>
+
+                <LinearLayout
+                    android:id="@+id/emptyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:src="@android:drawable/ic_menu_search"
+                        android:alpha="0.15"
+                        android:contentDescription="@string/order_empty_title"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/order_empty_title"
+                        android:textColor="#AAAAAA"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/order_empty_subtitle"
+                        android:textColor="#CCCCCC"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>
