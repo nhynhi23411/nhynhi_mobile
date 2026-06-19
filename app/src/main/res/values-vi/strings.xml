@@ -56,6 +56,7 @@
     <string name="str_department">Phòng ban</string>
     <string name="str_employee">Nhân viên</string>
     <string name="str_birthplace">Nơi sinh</string>
+    <string name="str_music_font">Âm nhạc và Font chữ</string>
 
     <!-- ====================================================================== -->
     <!-- 34 Provinces & Cities (String Array in Vietnamese) -->

@@ -166,6 +166,36 @@
                         app:iconTint="#FFFFFF"
                         app:iconPadding="10dp" />
 
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Tìm kiếm Ngành UEL"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openSearchMajor"
+                        app:backgroundTint="#1565C0"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_menu_search"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:layout_width="match_parent"
+                        android:layout_height="58dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/str_music_font"
+                        android:textColor="#FFFFFF"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:onClick="openFontAndMusic"
+                        app:backgroundTint="#607D8B"
+                        app:cornerRadius="14dp"
+                        app:icon="@android:drawable/ic_lock_silent_mode"
+                        app:iconTint="#FFFFFF"
+                        app:iconPadding="10dp" />
+
                 </LinearLayout>
 
             </com.google.android.material.card.MaterialCardView>

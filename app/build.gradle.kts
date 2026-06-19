@@ -77,6 +77,7 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.exp4j)
     implementation(libs.volley)
+    implementation(libs.jsoup)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

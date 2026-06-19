@@ -35,13 +35,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.K23411TApp">
         <activity
-            android:name=".GoldPriceActivity"
-            android:label="Giá Vàng"
+            android:name=".SearchMajorActivity"
+            android:exported="false"
+            android:label="Tìm kiếm Ngành UEL" />
+        <activity
+            android:name=".FontAndMusicActivity"
             android:exported="false" />
         <activity
+            android:name=".GoldPriceActivity"
+            android:exported="false"
+            android:label="Giá Vàng" />
+        <activity
             android:name=".MultiThreadingObjectActivity"
-            android:label="Multi-Threading Object"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Multi-Threading Object" />
         <activity
             android:name=".MultiThreadingActivity"
             android:exported="false" />

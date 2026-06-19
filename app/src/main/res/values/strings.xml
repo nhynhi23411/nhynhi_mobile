@@ -94,6 +94,10 @@
     <string name="str_categoryname">Category Name</string>
     <string name="str_categorydescription">Category Description</string>
     <string name="str_categoryid">Category ID</string>
+    <string name="play_audio_1">Play Audio 1</string>
+    <string name="play_audio_2">Play Audio 2</string>
+    <string name="audio_list_title">Audio List</string>
+    <string name="str_music_font">Music and Font</string>
 
     <string name="sms_title">Message Details</string>
     <string name="sms_sender_label">Sender (Phone):</string>

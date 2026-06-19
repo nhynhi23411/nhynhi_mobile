@@ -94,6 +94,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MultiThreadingObjectActivity.class));
     }
 
+    public void openSearchMajor(View view) {
+        startActivity(new Intent(this, SearchMajorActivity.class));
+    }
+
+    public void openFontAndMusic(View view) {
+        startActivity(new Intent(this, FontAndMusicActivity.class));
+    }
+
     public void openGoldPrice(View view) {
         startActivity(new Intent(this, GoldPriceActivity.class));
     }
