@@ -11,7 +11,7 @@ import java.util.List;
 
 public class FirebaseContactDbHelper extends SQLiteOpenHelper {
 
-    private static final String DB_NAME    = "firebase_contacts.db";
+    private static final String DB_NAME    = "contact.sqlite";
     private static final int    DB_VERSION = 1;
 
     public static final String TABLE   = "contacts";
@@ -34,6 +34,28 @@ public class FirebaseContactDbHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(CREATE_TABLE);
+        seedDefaultContacts(db);
+    }
+
+    private void seedDefaultContacts(SQLiteDatabase db) {
+        String[][] defaults = {
+            {"contact1", "Trần Duy Thanh",       "thanhtd@uel.edu.vn",         "987773061"},
+            {"contact2", "Phạm Thị Xuân Diệu",   "dieuptx@uel.edu.vn",         "9111111111"},
+            {"contact3", "Trần Phạm Thanh Trà",   "thanhtra@gmail.com",          "1112223334"},
+            {"contact4", "Trần Phạm Mẫn Nhi",     "tranphammannhi@gmail.com",    "3334446667"},
+            {"contact5", "Ho Trung Thanh",         "thanhht@uel.edu.vn",          "1131141159"},
+            {"contact6", "Nguyễn Văn An",          "nguyenvanan@gmail.com",       "0901234567"},
+            {"contact7", "Lê Thị Bảo Ngọc",       "lethibn@uel.edu.vn",          "0987654321"},
+            {"contact8", "Võ Thành Đạt",           "vothanhdat@yahoo.com",        "0933112233"},
+        };
+        for (String[] r : defaults) {
+            ContentValues cv = new ContentValues();
+            cv.put(COL_ID,    r[0]);
+            cv.put(COL_NAME,  r[1]);
+            cv.put(COL_EMAIL, r[2]);
+            cv.put(COL_PHONE, r[3]);
+            db.insertWithOnConflict(TABLE, null, cv, SQLiteDatabase.CONFLICT_IGNORE);
+        }
     }
 
     @Override
