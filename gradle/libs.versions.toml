@@ -10,6 +10,8 @@ constraintlayout = "2.1.4"
 exp4j = "0.4.8"
 volley = "1.2.1"
 jsoup = "1.17.2"
+googleGmsGoogleServices = "4.5.0"
+firebaseDatabase = "22.0.1"
 
 
 [libraries]
@@ -23,8 +25,10 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 exp4j = { group = "net.objecthunter", name = "exp4j", version.ref = "exp4j" }
 volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

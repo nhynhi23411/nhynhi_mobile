@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "811072273857",
+    "project_id": "k23411tapp",
+    "storage_bucket": "k23411tapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:811072273857:android:37863f8cefd730da804340",
+        "android_client_info": {
+          "package_name": "com.nhynhi.k23411tapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSqNHMpdh0s54tx2DchAaQk3q4VbR5eiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
