@@ -98,6 +98,28 @@
     <string name="play_audio_2">Play Audio 2</string>
     <string name="audio_list_title">Audio List</string>
     <string name="str_music_font">Music and Font</string>
+    <string name="str_firebase_contacts">Firebase Contacts</string>
+
+    <!-- Firebase Contact -->
+    <string name="fb_title">Firebase Contacts</string>
+    <string name="fb_add_contact">Add Contact</string>
+    <string name="fb_count_default">0 contacts</string>
+    <string name="fb_status_online">🟢  Online — syncing with Firebase Realtime Database</string>
+    <string name="fb_status_offline">🔴  Offline — showing local cached data</string>
+    <string name="fb_hint_name">Full name</string>
+    <string name="fb_hint_email">Email address</string>
+    <string name="fb_hint_phone">Phone number</string>
+    <string name="fb_dialog_add_title">Add new contact</string>
+    <string name="fb_dialog_edit_title">Edit contact</string>
+    <string name="fb_dialog_delete_title">Confirm delete</string>
+    <string name="fb_dialog_delete_msg">Delete %1$s from contacts?</string>
+    <string name="fb_action_edit">Edit contact</string>
+    <string name="fb_action_delete">Delete contact</string>
+    <string name="fb_action_update">Update</string>
+    <string name="fb_msg_added">Contact added successfully!</string>
+    <string name="fb_msg_saved_local">Saved locally (will sync when online)</string>
+    <string name="fb_error_load">Failed to load: </string>
+    <string name="fb_error_write">Failed to write: </string>
 
     <string name="sms_title">Message Details</string>
     <string name="sms_sender_label">Sender (Phone):</string>
@@ -143,5 +165,8 @@
         <item>Cao Bang Province</item>
     </string-array>
 
+    <plurals name="fb_contact_count">
+        <item quantity="other">%1$d contacts</item>
+    </plurals>
 
 </resources>

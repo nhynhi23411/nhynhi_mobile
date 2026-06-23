@@ -39,6 +39,10 @@
             android:exported="false"
             android:label="Tìm kiếm Ngành UEL" />
         <activity
+            android:name=".FirebaseContactActivity"
+            android:exported="false"
+            android:label="@string/fb_title" />
+        <activity
             android:name=".FontAndMusicActivity"
             android:exported="false" />
         <activity

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/edtFbName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="@string/fb_hint_name"
+        android:inputType="textPersonName"
+        android:background="@drawable/edittext_bg"
+        android:paddingHorizontal="14dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/edtFbEmail"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="@string/fb_hint_email"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_bg"
+        android:paddingHorizontal="14dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/edtFbPhone"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="@string/fb_hint_phone"
+        android:inputType="phone"
+        android:background="@drawable/edittext_bg"
+        android:paddingHorizontal="14dp" />
+
+</LinearLayout>

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 // Tự động cập nhật DB_ASSETS_VERSION trong MyDatabaseHelper.java
@@ -78,6 +79,7 @@ dependencies {
     implementation(libs.exp4j)
     implementation(libs.volley)
     implementation(libs.jsoup)
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

@@ -94,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, MultiThreadingObjectActivity.class));
     }
 
+    public void openFirebaseContacts(View view) {
+        startActivity(new Intent(this, FirebaseContactActivity.class));
+    }
+
     public void openSearchMajor(View view) {
         startActivity(new Intent(this, SearchMajorActivity.class));
     }
