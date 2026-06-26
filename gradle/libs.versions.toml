@@ -12,6 +12,7 @@ volley = "1.2.1"
 jsoup = "1.17.2"
 googleGmsGoogleServices = "4.5.0"
 firebaseDatabase = "22.0.1"
+glide = "4.16.0"
 
 
 [libraries]
@@ -26,6 +27,7 @@ exp4j = { group = "net.objecthunter", name = "exp4j", version.ref = "exp4j" }
 volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
 jsoup = { group = "org.jsoup", name = "jsoup", version.ref = "jsoup" }
 firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 
 
 [plugins]

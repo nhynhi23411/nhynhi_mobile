@@ -39,6 +39,22 @@
             android:exported="false"
             android:label="Tìm kiếm Ngành UEL" />
         <activity
+            android:name=".StoreHomeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".StoreAdminActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".StoreClientActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
+            android:name=".StoreCartActivity"
+            android:exported="false"
+            android:theme="@style/Theme.K23411TApp.NoActionBar" />
+        <activity
             android:name=".FirebaseContactActivity"
             android:exported="false"
             android:label="@string/fb_title"

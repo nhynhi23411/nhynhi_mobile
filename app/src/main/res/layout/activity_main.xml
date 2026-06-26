@@ -50,6 +50,22 @@
             android:orientation="vertical"
             android:padding="18dp">
 
+            <!-- DATABASE STORE (Firebase E-commerce) -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_marginBottom="16dp"
+                android:text="🛍️  Database Store"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:onClick="openDatabaseStore"
+                app:backgroundTint="#1565C0"
+                app:cornerRadius="18dp"
+                app:icon="@android:drawable/ic_menu_view"
+                app:iconTint="#FFFFFF"
+                app:iconPadding="10dp" />
+
             <!-- CARD TÍNH NĂNG -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"

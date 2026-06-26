@@ -110,6 +110,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, GoldPriceActivity.class));
     }
 
+    public void openDatabaseStore(View view) {
+        startActivity(new Intent(this, StoreHomeActivity.class));
+    }
+
     public void exitSystem(View view) {
         finishAffinity();
     }

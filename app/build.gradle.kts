@@ -80,6 +80,7 @@ dependencies {
     implementation(libs.volley)
     implementation(libs.jsoup)
     implementation(libs.firebase.database)
+    implementation(libs.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
